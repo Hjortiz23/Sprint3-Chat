@@ -42,8 +42,8 @@ class ChatController extends GetxController {
     updateEntryStreamSubscription = databaseReference
         .child('msg')
         .child(chatKey)
-        .onChildAdded
-        .listen(_onEntryAdded);
+        .onChildChanged
+        .listen(_onEntryChanged);
   }
 
   // método en el que cerramos los streams
